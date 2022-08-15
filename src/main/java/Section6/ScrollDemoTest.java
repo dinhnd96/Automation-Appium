@@ -13,9 +13,11 @@ import java.net.MalformedURLException;
 
 public class ScrollDemoTest extends BaseTest {
     @Test
-    public  void LongPressClick() throws MalformedURLException, InterruptedException {
+    public  void ScrollDemoTest() throws MalformedURLException, InterruptedException {
         driver.findElement(AppiumBy.accessibilityId("Views")).click();
-        driver.findElement(AppiumBy.androidUIAutomator("new UiScrollAble(new UiSelector()).scrollIntoView(text(\"WebView\"));"));
+
+        // Scroll into text view
+        driver.findElement(AppiumBy.androidUIAutomator("new UiScrollable(new UiSelector()).scrollIntoView(text(\"WebView\"));"));
 
     }
 }

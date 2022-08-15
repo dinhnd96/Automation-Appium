@@ -27,9 +27,7 @@ public class LongPressClick extends BaseTest {
         driver.findElement(AppiumBy.accessibilityId("Expandable Lists")).click();
         driver.findElement(AppiumBy.accessibilityId("1. Custom Adapter")).click();
         WebElement ele = driver.findElement(By.xpath("//android.widget.TextView[@text='People Names']"));
-        ((JavascriptExecutor) driver).executeScript("mobile: longClickGesture", ImmutableMap.of(
-                "elementId", ((RemoteWebElement) ele).getId() , "duration" , 2000
-        ));
+        LongPressClick(ele);
 
     }
 }
