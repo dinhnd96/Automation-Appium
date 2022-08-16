@@ -1,5 +1,6 @@
 package Section7;
 
+import PageObject.Android.FormPage;
 import Trainning.BaseTest;
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.android.Activity;
@@ -20,7 +21,7 @@ public class AppActivity extends BaseTest {
         Activity activity = new Activity("io.appium.android.apis","io.appium.android.apis.preference.PreferenceDependencies");
         driver.startActivity(activity);
 
-
+        FormPage formPage = new FormPage(driver);
         driver.findElement(By.id("android:id/checkbox")).click();
         driver.findElement(By.xpath("(//android.widget.RelativeLayout)[2]")).click();
         String alertTitle = driver.findElement(AppiumBy.id("android:id/alertTitle")).getText();

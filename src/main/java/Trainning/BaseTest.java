@@ -34,11 +34,11 @@ public class BaseTest {
 
         UiAutomator2Options options = new UiAutomator2Options();
         options.setDeviceName("SM G960N");
-        options.setChromedriverExecutable("D:\\untitled1\\src\\chromedriver.exe");
-//        options.setApp("C:\\Users\\Dev\\Desktop\\APKFiles\\resources\\ApiDemos-debug.apk");
-        options.setApp("C:\\Users\\Dev\\Downloads\\General-Store.apk");
+//        options.setChromedriverExecutable("D:\\untitled1\\src\\chromedriver.exe");
+        options.setApp("C:\\Users\\Dev\\Desktop\\APKFiles\\resources\\ApiDemos-debug.apk");
+//        options.setApp("C:\\Users\\Dev\\Downloads\\General-Store.apk");
 //        options.setApp("C:\\Users\\Dev\\Desktop\\app-arm64-v8a-releaseStaging.apk");
-         driver = new AndroidDriver(new URL("http://127.0.0.1:4723"),options);
+         driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub/"),options);
          driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
     }
