@@ -1,21 +1,17 @@
 package PageObject.Android;
 
-import Trainning.BaseTest;
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.android.AndroidDriver;
-import io.appium.java_client.pagefactory.AndroidFindBy;
-//import io.appium.java_client.pagefactory.AppiumFieldDecorator;
-import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 //import org.openqa.selenium.support.PageFactory;
 
-public class FormPage extends AndroidActions {
+public class CartPage extends AndroidActions {
     AndroidDriver driver;
 
-    public FormPage(AndroidDriver driver) {
+    public CartPage(AndroidDriver driver) {
         super(driver);
         this.driver = driver;
         System.out.println("Day laf constructor");
@@ -32,9 +28,6 @@ public class FormPage extends AndroidActions {
 
     @FindBy(id ="com.androidsample.generalstore:id/spinnerCountry" )
     private WebElement countryField;
-
-    @FindBy(id ="com.androidsample.generalstore:id/btnLetsShop" )
-    private WebElement btnLetShop;
 
 
     public void setCountryField(String countryName){
@@ -56,9 +49,5 @@ public class FormPage extends AndroidActions {
         } else {
             maleOptions.click();
         }
-    }
-
-    public void clickBtn(){
-        btnLetShop.click();
     }
 }

@@ -13,7 +13,7 @@ import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-public class AppiumBasic extends BaseTest {
+public class AppiumBasic extends BaseTestDemo {
 
     @Test
     public  void WifiSettingsName() throws MalformedURLException {

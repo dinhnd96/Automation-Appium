@@ -21,7 +21,7 @@ public class AppActivity extends BaseTest {
         Activity activity = new Activity("io.appium.android.apis","io.appium.android.apis.preference.PreferenceDependencies");
         driver.startActivity(activity);
 
-        FormPage formPage = new FormPage(driver);
+//        FormPage formPage = new FormPage();
         driver.findElement(By.id("android:id/checkbox")).click();
         driver.findElement(By.xpath("(//android.widget.RelativeLayout)[2]")).click();
         String alertTitle = driver.findElement(AppiumBy.id("android:id/alertTitle")).getText();

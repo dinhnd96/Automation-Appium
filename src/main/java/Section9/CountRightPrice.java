@@ -1,5 +1,6 @@
 package Section9;
 
+import PageObject.Android.FormPage;
 import Trainning.BaseTest;
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.android.nativekey.AndroidKey;
@@ -17,6 +18,8 @@ public class CountRightPrice extends BaseTest {
 
     @Test
     public void CountRightPrice() throws InterruptedException {
+//        FormPage formPage = new FormPage(driver);
+
         driver.findElement(By.xpath("//android.widget.RadioButton[@text='Female']")).click();
         driver.findElement(AppiumBy.id("com.androidsample.generalstore:id/nameField")).click();
         driver.findElement(AppiumBy.id("com.androidsample.generalstore:id/nameField")).sendKeys("Nguyen Duy Dinh");
@@ -40,7 +43,7 @@ public class CountRightPrice extends BaseTest {
             System.out.println(sum);
         }
         String displaySum = driver.findElement(By.id("com.androidsample.generalstore:id/totalAmountLbl")).getText();
-        Double displayFommattedSum = getFommattedAmount(displaySum);
+        double displayFommattedSum = getFommattedAmount(displaySum);
         Assert.assertEquals(displayFommattedSum,sum);
         WebElement ele = driver.findElement(By.id("com.androidsample.generalstore:id/termsButton"));
         LongPressClick(ele);
