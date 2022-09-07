@@ -1,7 +1,6 @@
 package Test;
 
 
-
 import PageObject.HomePageVconomics;
 import PageObject.WelcomPage;
 import Trainning.BaseTest;
@@ -13,28 +12,30 @@ import org.testng.annotations.Test;
 public class TestLogin extends BaseTest {
 
     @BeforeMethod
-    public void BeforeMethod(){
-        Activity activity = new Activity("com.vconomics","com.vconomics.MainActivity");
+    public void BeforeMethod() {
+        Activity activity = new Activity("com.vconomics", "com.vconomics.MainActivity");
         driver.startActivity(activity);
     }
-    @Test(priority = 0)
+
+    @Test(priority = 0, groups = "Smoke")
     public void Login() throws InterruptedException {
 
         WelcomPage welcomPage = new WelcomPage(driver);
-        welcomPage.LogInAccount("nguyenduydinh96@yahoo.com","Dinh12345");
+        welcomPage.LogInAccount("nguyenduydinh96@yahoo.com", "Dinh1234");
         Thread.sleep(5000);
+        Assert.assertTrue(true);
     }
 
-    @Test(priority = 1)
-    public void ClickDefiBattle() throws InterruptedException {
-//        Activity activity = new Activity("com.vconomics","com.vconomics.MainActivity");
-//        driver.startActivity(activity);
-
-        Thread.sleep(5000);
-        WelcomPage welcomPage = new WelcomPage(driver);
-        HomePageVconomics homePageVconomics = new HomePageVconomics(driver);
-        homePageVconomics.ClickDefibattle();
-    }
+//    @Test(priority = 1)
+//    public void ClickDefiBattle() throws InterruptedException {
+////        Activity activity = new Activity("com.vconomics","com.vconomics.MainActivity");
+////        driver.startActivity(activity);
+//
+//        Thread.sleep(5000);
+//        WelcomPage welcomPage = new WelcomPage(driver);
+//        HomePageVconomics homePageVconomics = new HomePageVconomics(driver);
+//        homePageVconomics.ClickDefibattle();
+//    }
 
 //    @Test(priority = 2)
 //    public void ClickVscore() throws InterruptedException {

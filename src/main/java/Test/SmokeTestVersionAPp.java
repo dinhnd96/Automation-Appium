@@ -1,7 +1,6 @@
 package Test;
 
 
-
 import PageObject.CommunityScreen;
 import PageObject.HomePageVconomics;
 import PageObject.ProfileScreen;
@@ -22,7 +21,7 @@ public class SmokeTestVersionAPp extends BaseTest {
     @Test(priority = 0)
     public void CheckVersionApp() throws InterruptedException {
         WelcomPage welcomPage = new WelcomPage(driver);
-        welcomPage.LogInAccount("dinhnd96@gmail.com","Dinh1234");
+        welcomPage.LogInAccount("dinhnd96@gmail.com", "Dinh1234");
         HomePageVconomics homePageVconomics = new HomePageVconomics(driver);
         homePageVconomics.ClickProfile();
         Thread.sleep(5000);

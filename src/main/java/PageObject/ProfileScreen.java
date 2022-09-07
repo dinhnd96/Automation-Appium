@@ -21,11 +21,12 @@ import static java.time.Duration.ofSeconds;
 
 public class ProfileScreen extends AndroidActions {
     AndroidDriver driver;
-    public ProfileScreen(AndroidDriver driver){
+
+    public ProfileScreen(AndroidDriver driver) {
         super(driver);
         this.driver = driver;
         System.out.println("Day laf constructor");
-        PageFactory.initElements(driver,this);
+        PageFactory.initElements(driver, this);
     }
 
     @FindBy(xpath = "//android.widget.TextView[@index='13']")
@@ -38,12 +39,11 @@ public class ProfileScreen extends AndroidActions {
     private WebElement element;
 
 
-
-    public void ScrollIntoVersion(){
+    public void ScrollIntoVersion() {
         swipeUp(5);
     }
 
-    public String getVersionText(){
+    public String getVersionText() {
         System.out.println(versionText.getAttribute("text"));
         return versionText.getAttribute("text");
     }

@@ -20,7 +20,7 @@ public class SwipeDemoTest extends BaseTest {
         driver.findElement(AppiumBy.accessibilityId("1. Photos")).click();
         WebElement ele = driver.findElement(By.xpath("//(android.widget.ImageView)[1]"));
         Assert.assertEquals(driver.findElement(By.xpath("//(android.widget.ImageView)[1]")).getAttribute("focusable"),"true");
-        Swipe(ele);
+        SwipeEle(ele);
         Thread.sleep(3000);
         Assert.assertEquals(driver.findElement(By.xpath("//(android.widget.ImageView)[1]")).getAttribute("focusable"),"false");
 

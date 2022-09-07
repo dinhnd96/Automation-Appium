@@ -14,7 +14,7 @@ public class VpoolScreen extends AndroidActions {
         super(driver);
         this.driver = driver;
         System.out.println("This is constructor");
-        PageFactory.initElements(driver,this);
+        PageFactory.initElements(driver, this);
     }
 
     // Home Vpool
@@ -65,25 +65,23 @@ public class VpoolScreen extends AndroidActions {
     private WebElement confirmBtn;
 
 
-
-
-    public void ClickBackBtnSaving(){
+    public void ClickBackBtnSaving() {
         backBtn.click();
     }
 
-    public void ClickWalletBtnSaving(){
+    public void ClickWalletBtnSaving() {
         walletBtn.click();
     }
 
-    public void ClickSaving(){
+    public void ClickSaving() {
         savingBtn.click();
     }
 
-    public void ClickSavingHistory(){
+    public void ClickSavingHistory() {
         savingHistoryBtn.click();
     }
 
-    public void ClickFlexibleDeposit(){
+    public void ClickFlexibleDeposit() {
         depositBtnSaving.click();
     }
 

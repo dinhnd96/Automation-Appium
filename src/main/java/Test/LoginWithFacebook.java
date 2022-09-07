@@ -1,7 +1,6 @@
 package Test;
 
 
-
 import PageObject.WelcomPage;
 import Trainning.BaseTest;
 import io.appium.java_client.android.Activity;
@@ -25,7 +24,7 @@ public class LoginWithFacebook extends BaseTest {
     public void LoginSusscessWithFacebook() throws InterruptedException {
 
         WelcomPage welcomPage = new WelcomPage(driver);
-        welcomPage.LoginWithFacebook("nguyenduydinh96@yahoo.com","Dinh12345");
+        welcomPage.LoginWithFacebook("nguyenduydinh96@yahoo.com", "Dinh12345");
         Thread.sleep(5000);
 //        Set<String> contexts = driver.getContextHandles();
 //        for(String contextName : contexts) {

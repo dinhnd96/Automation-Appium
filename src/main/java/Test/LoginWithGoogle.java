@@ -1,7 +1,6 @@
 package Test;
 
 
-
 import PageObject.WelcomPage;
 import Trainning.BaseTest;
 import io.appium.java_client.android.Activity;
@@ -19,7 +18,7 @@ public class LoginWithGoogle extends BaseTest {
     public void LoginSusscessWithGoogle() throws InterruptedException {
 
         WelcomPage welcomPage = new WelcomPage(driver);
-        welcomPage.LoginWithGoogle("nguyenduydinh96@yahoo.com","Dinh12345");
+        welcomPage.LoginWithGoogle("nguyenduydinh96@yahoo.com", "Dinh12345");
         Thread.sleep(5000);
     }
 

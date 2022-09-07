@@ -1,7 +1,6 @@
 package Test;
 
 
-
 import PageObject.HomePageVconomics;
 import PageObject.VscoreScreen;
 import PageObject.WelcomPage;
@@ -15,13 +14,10 @@ import org.testng.annotations.Test;
 public class TestVscore extends BaseTest {
 
 
-
-
-
     @Test(priority = 0)
     public void Vscore() throws InterruptedException {
         WelcomPage welcomPage = new WelcomPage(driver);
-        welcomPage.LogInAccount("nguyenduydinh96@yahoo.com","Dinh12345");
+        welcomPage.LogInAccount("dinhnd96@gmail.com", "Dinh1234");
         Thread.sleep(5000);
         HomePageVconomics homePageVconomics = new HomePageVconomics(driver);
         homePageVconomics.ClickVscore();
@@ -43,7 +39,7 @@ public class TestVscore extends BaseTest {
 
     @Test(priority = 1)
     public void CheckSurVeyScreen() throws InterruptedException {
-        Activity activity = new Activity("com.vconomics","com.vconomics.MainActivity");
+        Activity activity = new Activity("com.vconomics", "com.vconomics.MainActivity");
         driver.startActivity(activity);
         Thread.sleep(5000);
         HomePageVconomics homePageVconomics = new HomePageVconomics(driver);

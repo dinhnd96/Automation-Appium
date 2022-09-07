@@ -1,7 +1,6 @@
 package Test;
 
 
-
 import PageObject.SignUpPage;
 import PageObject.WelcomPage;
 import Trainning.BaseTest;
@@ -21,12 +20,12 @@ public class TestSignUp extends BaseTest {
         String account = "abcd211@gmail.com";
 
         SignUpPage signUpPage = new SignUpPage(driver);
-        signUpPage.SignUpAccount(account,"Dinh1234","dinh","");
+        signUpPage.SignUpAccount(account, "Dinh1234", "dinh", "");
         Thread.sleep(5000);
-        Activity activity = new Activity("com.vconomics","com.vconomics.MainActivity");
+        Activity activity = new Activity("com.vconomics", "com.vconomics.MainActivity");
         driver.startActivity(activity);
         WelcomPage welcomPage = new WelcomPage(driver);
-        welcomPage.LogInAccount2(account,"Dinh1234");
+        welcomPage.LogInAccount2(account, "Dinh1234");
 
     }
 

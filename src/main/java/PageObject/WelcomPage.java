@@ -11,11 +11,12 @@ import org.testng.Assert;
 
 public class WelcomPage extends AndroidActions {
     AndroidDriver driver;
-    public WelcomPage(AndroidDriver driver){
+
+    public WelcomPage(AndroidDriver driver) {
         super(driver);
         this.driver = driver;
         System.out.println("Day laf constructor");
-        PageFactory.initElements(driver,this);
+        PageFactory.initElements(driver, this);
     }
 
     @FindBy(xpath = "//android.widget.TextView[@text='ENGLISH']")
@@ -40,7 +41,7 @@ public class WelcomPage extends AndroidActions {
     @FindBy(xpath = "//android.view.ViewGroup[@bounds='[58,1173][1022,1307]']")
     private WebElement signInBtn2;
 
-    @FindBy(xpath = "//android.view.ViewGroup[@bounds='[58,1173][1022,1307]']")
+    @FindBy(xpath = "//android.view.ViewGroup[@bounds='[963,514][1053,604]']")
     private WebElement closeAdsBtn;
 
     @FindBy(xpath = "//android.view.ViewGroup[@bounds='[281,1448][800,1564]']")
@@ -62,7 +63,7 @@ public class WelcomPage extends AndroidActions {
     private WebElement textWrongPassword;
 
 
-    public void LogInAccount(String email , String password) throws InterruptedException {
+    public void LogInAccount(String email, String password) throws InterruptedException {
         Thread.sleep(3000);
 //        waitForElementVisible();
 //        driver.findElement(By.xpath("//android.view.ViewGroup[@bounds='[137,1756][943,1896]")).click();
@@ -76,7 +77,7 @@ public class WelcomPage extends AndroidActions {
         closeAdsBtn.click();
     }
 
-    public void LogInAccount2(String email , String password) throws InterruptedException {
+    public void LogInAccount2(String email, String password) throws InterruptedException {
         Thread.sleep(3000);
         signInBtn.click();
         emailField.sendKeys(email);
@@ -85,7 +86,7 @@ public class WelcomPage extends AndroidActions {
         Thread.sleep(2000);
     }
 
-    public void LoginFail(String email , String password) throws InterruptedException {
+    public void LoginFail(String email, String password) throws InterruptedException {
         engBtn.click();
         continuteBtn.click();
         signInBtn.click();
@@ -96,10 +97,10 @@ public class WelcomPage extends AndroidActions {
         String textWrong = textWrongPassword.getAttribute("text");
         System.out.println(textWrong);
         String expectedText = "Username or password invalid. Your account will be temporarily locked if you enter the wrong password 5 times or more";
-        Assert.assertEquals(textWrong,expectedText);
+        Assert.assertEquals(textWrong, expectedText);
     }
 
-    public void LoginWithGoogle(String email , String password) throws InterruptedException {
+    public void LoginWithGoogle(String email, String password) throws InterruptedException {
         engBtn.click();
         continuteBtn.click();
         signInBtn.click();
@@ -110,7 +111,7 @@ public class WelcomPage extends AndroidActions {
 
     }
 
-    public void LoginWithFacebook(String email , String password) throws InterruptedException {
+    public void LoginWithFacebook(String email, String password) throws InterruptedException {
         engBtn.click();
         continuteBtn.click();
         signInBtn.click();
@@ -119,7 +120,7 @@ public class WelcomPage extends AndroidActions {
 
     }
 
-    public void LogInAccount5times(String email , String password) throws InterruptedException {
+    public void LogInAccount5times(String email, String password) throws InterruptedException {
         Thread.sleep(3000);
 
         engBtn.click();
@@ -127,7 +128,7 @@ public class WelcomPage extends AndroidActions {
         signInBtn.click();
 
         String expectedText = "Username or password invalid. Your account will be temporarily locked if you enter the wrong password 5 times or more";
-        for ( int i = 0 ; i < 6 ; i++) {
+        for (int i = 0; i < 6; i++) {
             emailField.sendKeys(email);
             passwordField.sendKeys(password + i);
             signInBtn2.click();

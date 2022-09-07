@@ -13,11 +13,11 @@ public class TestVpool extends BaseTest {
     public void Login() throws InterruptedException {
 
         WelcomPage welcomPage = new WelcomPage(driver);
-        welcomPage.LogInAccount("nguyenduydinh96@yahoo.com","Dinh12345");
-        Thread.sleep(5000);
+        welcomPage.LogInAccount("dinhnd96@gmail.com", "Dinh1234");
+        Thread.sleep(2000);
         HomePageVconomics homePageVconomics = new HomePageVconomics(driver);
         homePageVconomics.ClickVpool();
-        Thread.sleep(5000);
+        Thread.sleep(2000);
         VpoolScreen vpoolScreen = new VpoolScreen(driver);
         vpoolScreen.SavingFlexible("2");
     }

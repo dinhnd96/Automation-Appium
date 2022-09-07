@@ -5,12 +5,10 @@ import com.google.common.collect.ImmutableMap;
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
-import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebElement;
-import org.openqa.selenium.support.PageFactory;
 
 import static io.appium.java_client.touch.WaitOptions.waitOptions;
 import static io.appium.java_client.touch.offset.PointOption.point;
@@ -54,6 +52,27 @@ public class AndroidActions extends AppiumUtils {
                 new TouchAction<>(driver).press(point(startVerticalX, startVerticalY))
                         .waitAction(waitOptions(ofSeconds(2))).moveTo(point(startVerticalX, endVerticalY)).release()
                         .perform();
+
+            }
+        } catch (Exception e) {
+            //print error or something
+        }
+    }
+
+    public void swipeLeft(int howManySwipes) {
+        Dimension size = driver.manage().window().getSize();
+        System.out.println(size);
+        // calculate coordinates for vertical swipe
+        int startVerticalY = (int) (size.height * 0.8);
+        int endVerticalY = (int) (size.height * 0.21);
+        int startVerticalX = (int) (size.width / 2.1);
+        int endVerticalX = (int) (size.width/ 1.4);
+            // Thay đổi XOffset để lướt từ trái sang phải (xOffset lần 1 > lần 2 )
+        try {
+            for (int i = 1; i <= howManySwipes; i++) {
+                new TouchAction<>(driver).press(point(1000, startVerticalY))
+                        .waitAction(waitOptions(ofSeconds(2))).moveTo(point(100, startVerticalY)).release()
+                        .perform();
             }
         } catch (Exception e) {
             //print error or something
@@ -90,10 +109,20 @@ public class AndroidActions extends AppiumUtils {
     }
 
 
-
-    public void Swipe(WebElement ele){
+    public void Swipe(){
         ((JavascriptExecutor) driver).executeScript("mobile: swipeGesture", ImmutableMap.of(
-                "elementId", ((RemoteWebElement) ele).getId() , "direction", "left",
+                "left", 600, "top", 1000, "width", 400, "height", 400,
+                "direction", "left",
+                "percent", 0.75
+        ));
+    }
+
+
+
+    public void SwipeLeft(WebElement ele){
+        ((JavascriptExecutor) driver).executeScript("mobile: swipeGesture", ImmutableMap.of(
+                "left", 100, "top", 100, "width", 200, "height", 200,
+                "direction", "left",
                 "percent", 0.75
         ));
     }

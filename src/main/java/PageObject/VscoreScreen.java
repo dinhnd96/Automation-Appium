@@ -11,11 +11,12 @@ import org.openqa.selenium.support.PageFactory;
 
 public class VscoreScreen extends AndroidActions {
     AndroidDriver driver;
-    public VscoreScreen(AndroidDriver driver){
+
+    public VscoreScreen(AndroidDriver driver) {
         super(driver);
         this.driver = driver;
         System.out.println("Day laf constructor");
-        PageFactory.initElements(driver,this);
+        PageFactory.initElements(driver, this);
     }
 
     @FindBy(xpath = "//android.view.ViewGroup[@bounds='[48,139][108,187]']")
@@ -98,100 +99,102 @@ public class VscoreScreen extends AndroidActions {
     private WebElement submitBtn;
 
 
-
     // Function on screen
 
 
-    public void clickBackBtnBell(){
+    public void clickBackBtnBell() {
         backBtnBell.click();
     }
-    public void clickBackBtnSurveyHistory(){
+
+    public void clickBackBtnSurveyHistory() {
         backBtnSurveyHistory.click();
     }
 
-    public void clickBackBtnSurveyScreen(){
+    public void clickBackBtnSurveyScreen() {
         backBtnSurveyScreen.click();
     }
 
-    public void clickBackBtnFinanceScreen(){
+    public void clickBackBtnFinanceScreen() {
         backBtnFinanceSceen.click();
     }
 
-    public void clickBackBtn(){
+    public void clickBackBtn() {
         backBtn.click();
     }
-    public void clickBellBtn(){
+
+    public void clickBellBtn() {
         bellBtn.click();
     }
 
-    public void clickSurveyStatus(){
+    public void clickSurveyStatus() {
         surveyBtn.click();
     }
 
-    public void clickHistoryBtn(){
+    public void clickHistoryBtn() {
         historyBtn.click();
     }
 
-    public void clickHomeBtn(){
+    public void clickHomeBtn() {
         homeBtn.click();
     }
 
-    public void clickSurveyBtn(){
+    public void clickSurveyBtn() {
         surveyBtn.click();
     }
 
-    public void clickLoanBtn(){
+    public void clickLoanBtn() {
         loanBtn.click();
     }
 
-    public void clickDepositBtn(){
+    public void clickDepositBtn() {
         depositBtn.click();
     }
 
-    public void clickCreditHistoryBtn(){
+    public void clickCreditHistoryBtn() {
         creditHistoryBtn.click();
     }
 
-    public void clickPersonalProfileBtn(){
+    public void clickPersonalProfileBtn() {
         personalProfileBtn.click();
     }
 
-    public void clickFinanceBtn(){
+    public void clickFinanceBtn() {
         financeBtn.click();
     }
 
-    public void clickCharacteristicBtn(){
+    public void clickCharacteristicBtn() {
         characteristicBtn.click();
     }
 
-    public void clickHomeLoansBtn(){
+    public void clickHomeLoansBtn() {
         homeLoansBtn.click();
     }
 
-    public void clickCarLoansBtn(){
+    public void clickCarLoansBtn() {
         carLoansBtn.click();
     }
-    public void clickBusinessLoansBtn(){
+
+    public void clickBusinessLoansBtn() {
         businessLoansBtn.click();
     }
 
-    public void clickSecureLoansBtn(){
+    public void clickSecureLoansBtn() {
         secureLoansBtn.click();
     }
 
-    public void clickUnsecureLoansBtn(){
+    public void clickUnsecureLoansBtn() {
         unsecureLoansBtn.click();
     }
 
-    public void clickCreditCardBtn(){
+    public void clickCreditCardBtn() {
         creditCardBtn.click();
     }
 
-    public void setAmoutField(String amout){
+    public void setAmoutField(String amout) {
         amoutField.sendKeys(String.valueOf(amout));
     }
 
-    public void termCursorHandle(){
+    public void termCursorHandle() {
         ((JavascriptExecutor) driver).executeScript("mobile: dragGesture", ImmutableMap.of(
                 "elementId", ((RemoteWebElement) termCursor).getId(),
                 "endX", 931,
@@ -199,7 +202,7 @@ public class VscoreScreen extends AndroidActions {
         ));
     }
 
-    public void ClickSubmitBtn(){
+    public void ClickSubmitBtn() {
         submitBtn.click();
     }
 

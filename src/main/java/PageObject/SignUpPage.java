@@ -9,11 +9,12 @@ import org.testng.Assert;
 
 public class SignUpPage extends AndroidActions {
     AndroidDriver driver;
-    public SignUpPage(AndroidDriver driver){
+
+    public SignUpPage(AndroidDriver driver) {
         super(driver);
         this.driver = driver;
         System.out.println("Day laf constructor");
-        PageFactory.initElements(driver,this);
+        PageFactory.initElements(driver, this);
     }
 
     @FindBy(xpath = "//android.widget.TextView[@text='ENGLISH']")
@@ -48,8 +49,7 @@ public class SignUpPage extends AndroidActions {
     private WebElement signUpSubmitBtn;
 
 
-
-    public void SignUpAccount(String email , String password, String name,String referral) throws InterruptedException {
+    public void SignUpAccount(String email, String password, String name, String referral) throws InterruptedException {
         Thread.sleep(3000);
         engBtn.click();
         continuteBtn.click();
@@ -62,7 +62,6 @@ public class SignUpPage extends AndroidActions {
         signUpSubmitBtn.click();
         Thread.sleep(2000);
     }
-
 
 
 }

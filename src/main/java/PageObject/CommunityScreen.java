@@ -11,11 +11,12 @@ import java.util.Arrays;
 
 public class CommunityScreen extends AndroidActions {
     AndroidDriver driver;
-    public CommunityScreen(AndroidDriver driver){
+
+    public CommunityScreen(AndroidDriver driver) {
         super(driver);
         this.driver = driver;
         System.out.println("Day laf constructor");
-        PageFactory.initElements(driver,this);
+        PageFactory.initElements(driver, this);
     }
 
     @FindBy(xpath = "//android.widget.TextView[@index='2']")
@@ -28,24 +29,25 @@ public class CommunityScreen extends AndroidActions {
     private WebElement smartContractCoppyBtn;
 
 
-    public String getSmartContract(){
+    public String getSmartContract() {
         smartContractCoppyBtn.click();
         String text = driver.getClipboardText();
         return text;
     }
 
-    public void getPeopleNumber(){
+    public void getPeopleNumber() {
         String realResult = totalMemberEle.getAttribute("text");
-        String[] words=realResult.split("\\,");//splits the string based on whitespace
+        String[] words = realResult.split("\\,");//splits the string based on whitespace
 //using java foreach loop to print elements of string array
         Arrays.toString(words);
         String result = words[0] + words[1] + words[2];
         System.out.println(result);
     }
 
-    public String GetTotalPeoPle(){
-        String realResult = totalMemberEle.getAttribute("text"); totalMemberEle.getAttribute("text");
-        String[] words=realResult.split("\\,");//splits the string based on whitespace
+    public String GetTotalPeoPle() {
+        String realResult = totalMemberEle.getAttribute("text");
+        totalMemberEle.getAttribute("text");
+        String[] words = realResult.split("\\,");//splits the string based on whitespace
 //using java foreach loop to print elements of string array
         Arrays.toString(words);
         String result = words[0] + words[1] + words[2];
