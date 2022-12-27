@@ -35,17 +35,17 @@
         </classes>
     </test>
 
-<!--    <test name="Nopackage6" >-->
-<!--        <classes>-->
-<!--            <class name="Test.SmokeTestLogin" />-->
-<!--        </classes>-->
-<!--    </test>-->
-
-    <test name="Nopackage7" >
+    <test name="Nopackage6" >
         <classes>
-            <class name="Test.TestMissionScreen" />
+            <class name="Test.TestGodSend" />
         </classes>
     </test>
+
+<!--    <test name="Nopackage7" >-->
+<!--        <classes>-->
+<!--            <class name="Test.TestMissionScreen" />-->
+<!--        </classes>-->
+<!--    </test>-->
 
     <test name="Nopackage8" >
         <classes>
@@ -59,11 +59,39 @@
         </classes>
     </test>
 
-    <test name="Nopackage10" >
+<!--    <test name="Nopackage10" >-->
+<!--        <classes>-->
+<!--            <class name="Test.TestVscore" />-->
+<!--        </classes>-->
+<!--    </test>-->
+
+        <test name="Nopackage11" >
+            <classes>
+                <class name="Test.TestVFactory" />
+            </classes>
+        </test>
+    <test name="Nopackage12" >
+            <classes>
+                <class name="Test.TestVEx" />
+            </classes>
+        </test>
+
+    <test name="Nopackage13" >
         <classes>
-            <class name="Test.TestVscore" />
+            <class name="Test.ChangePassword" />
         </classes>
     </test>
 
+    <test name="Nopackage14" >
+        <classes>
+            <class name="Test.TestVLendingCreateLoan" />
+        </classes>
+    </test>
+
+    <test name="Nopackage15" >
+        <classes>
+            <class name="Test.TestVLendingCreateLend" />
+        </classes>
+    </test>
 
 </suite>

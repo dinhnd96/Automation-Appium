@@ -27,10 +27,10 @@ public class SmokeTestLogin extends BaseTest {
 //    }
 
     @Test(priority = 1, dataProvider = "getData")
-    public void LoginSusscess(HashMap<String, String> input) throws InterruptedException {
+    public void LoginSusscess() throws InterruptedException {
 
         WelcomPage welcomPage = new WelcomPage(driver);
-        welcomPage.LogInAccount(input.get("email"), input.get("password"));
+        welcomPage.LogInAccount("dinhnd96@gmail.com", "Dinh1234");
         Thread.sleep(5000);
     }
 

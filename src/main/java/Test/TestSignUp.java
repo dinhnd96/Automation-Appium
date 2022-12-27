@@ -17,7 +17,7 @@ public class TestSignUp extends BaseTest {
 
     @Test(priority = 1)
     public void CreateAccount() throws InterruptedException {
-        String account = "abcd211@gmail.com";
+        String account = "abcd2111@gmail.com";
 
         SignUpPage signUpPage = new SignUpPage(driver);
         signUpPage.SignUpAccount(account, "Dinh1234", "dinh", "");

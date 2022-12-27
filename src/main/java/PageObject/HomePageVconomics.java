@@ -26,7 +26,7 @@ public class HomePageVconomics extends AndroidActions {
     @FindBy(xpath = "//android.widget.TextView[@text='Vouchers']")
     private WebElement voucherBtn;
 
-    @FindBy(xpath = "//android.widget.TextView[@text='Referral'")
+    @FindBy(xpath = "//android.widget.TextView[@text='Referral']")
     private WebElement referralBtn;
 
     @FindBy(xpath = "//android.widget.TextView[@text='Godsend']")
@@ -62,6 +62,11 @@ public class HomePageVconomics extends AndroidActions {
     @FindBy(xpath = "//android.widget.TextView[@text='See more']")
     private WebElement seeMoreBtn;
 
+    @FindBy(xpath = "//android.widget.TextView[@text='Vex']")
+    private WebElement vexBtn;
+
+    @FindBy(xpath = "//android.widget.TextView[@text='Vlending']")
+    private WebElement VLendingBtn;
     public void ClickVscore() {
         VscoreBtn.click();
     }
@@ -75,6 +80,7 @@ public class HomePageVconomics extends AndroidActions {
     }
 
     public void ClickRefferal() {
+        seeMoreBtn.click();
         referralBtn.click();
     }
 
@@ -95,6 +101,7 @@ public class HomePageVconomics extends AndroidActions {
     }
 
     public void ClickVfactory() {
+        seeMoreBtn.click();
         vfactoryBtn.click();
     }
 
@@ -114,8 +121,17 @@ public class HomePageVconomics extends AndroidActions {
         communityBtn.click();
     }
 
+    public void ClickVLending(){
+        seeMoreBtn.click();
+        VLendingBtn.click();
+    }
+
     public void ClickProfile() {
         profileBtn.click();
+    }
+    public void ClickVEx() {
+        seeMoreBtn.click();
+        vexBtn.click();
     }
 
 }

@@ -38,7 +38,7 @@ public class MissionScreen extends AndroidActions {
     @FindBy(xpath = "//android.widget.TextView[@text='Mission 3']")
     private WebElement mission3Btn;
 
-    @FindBy(xpath = "//android.widget.TextView[@text='Comment on Vconomics Fanpage's posts']")
+    @FindBy(xpath = "//android.widget.TextView[@text='Retweet Twitter posts']")
     private WebElement mission1Day3Btn;
 
     @FindBy(xpath = "//android.widget.TextView[@text='Mission 4']")

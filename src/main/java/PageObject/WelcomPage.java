@@ -22,7 +22,7 @@ public class WelcomPage extends AndroidActions {
     @FindBy(xpath = "//android.widget.TextView[@text='ENGLISH']")
     private WebElement engBtn;
 
-    @FindBy(xpath = "//android.widget.TextView[@text='Continue']")
+    @FindBy(xpath = "//android.widget.TextView[@bounds='[449,2033][632,2094]']")
     private WebElement continuteBtn;
 
     @FindBy(xpath = "//android.view.ViewGroup[@bounds='[72,1830][526,1991]']")
@@ -41,8 +41,11 @@ public class WelcomPage extends AndroidActions {
     @FindBy(xpath = "//android.view.ViewGroup[@bounds='[58,1173][1022,1307]']")
     private WebElement signInBtn2;
 
-    @FindBy(xpath = "//android.view.ViewGroup[@bounds='[963,514][1053,604]']")
-    private WebElement closeAdsBtn;
+    @FindBy(xpath = "//android.view.ViewGroup[@bounds='[963,415][1053,505]']")
+    private WebElement closeAdsBtn; //Dev
+
+//    @FindBy(xpath = "//android.view.ViewGroup[@bounds='[963,299][1053,389]']") Product
+//    private WebElement closeAdsBtn;
 
     @FindBy(xpath = "//android.view.ViewGroup[@bounds='[281,1448][800,1564]']")
     private WebElement confirmBtn;

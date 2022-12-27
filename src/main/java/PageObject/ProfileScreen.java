@@ -35,12 +35,19 @@ public class ProfileScreen extends AndroidActions {
     @FindBy(xpath = "//android.widget.TextView[@text='Referral']")
     private WebElement referralEle;
 
+    @FindBy(xpath = "//android.widget.TextView[@text='Change password']")
+    private WebElement changePasswordEle;
+
     @FindBy(xpath = "//android.view.ViewGroup[@bounds='[46,687][1034,1873]']")
     private WebElement element;
 
 
     public void ScrollIntoVersion() {
-        swipeUp(5);
+        swipeUp(2);
+    }
+
+    public void ClickChangePassword(){
+        changePasswordEle.click();
     }
 
     public String getVersionText() {

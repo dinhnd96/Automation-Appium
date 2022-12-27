@@ -1,7 +1,7 @@
 package Test;
 
 
-import PageObject.CommunityScreen;
+import PageObject.ChangePasswordScreen;
 import PageObject.HomePageVconomics;
 import PageObject.ProfileScreen;
 import PageObject.WelcomPage;
@@ -11,17 +11,15 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import java.util.HashMap;
-
-public class SmokeTestVersionAPp extends BaseTest {
-//    @BeforeMethod
-//    public void BeforeMethod(){
-//        Activity activity = new Activity("com.vconomics","com.vconomics.MainActivity");
-//        driver.startActivity(activity);
-//    }
+public class ChangePassword extends BaseTest {
+    @BeforeMethod
+    public void BeforeMethod(){
+        Activity activity = new Activity("com.vconomics","com.vconomics.MainActivity");
+        driver.startActivity(activity);
+    }
 
     @Test(priority = 0)
-    public void CheckVersionApp() throws InterruptedException {
+    public void ChangePassWord() throws InterruptedException {
         WelcomPage welcomPage = new WelcomPage(driver);
         welcomPage.LogInAccount("dinhnd96@gmail.com", "Dinh1234");
         HomePageVconomics homePageVconomics = new HomePageVconomics(driver);
@@ -29,8 +27,27 @@ public class SmokeTestVersionAPp extends BaseTest {
         Thread.sleep(5000);
         ProfileScreen profileScreen = new ProfileScreen(driver);
         profileScreen.ScrollIntoVersion();
-        String realResult = profileScreen.getVersionText();
-        Assert.assertTrue(realResult.contains("1.5.18"));
+        profileScreen.ClickChangePassword();
+        ChangePasswordScreen changePasswordScreen = new ChangePasswordScreen(driver);
+        changePasswordScreen.changePassword("Dinh1234","Dinh12345");
+        changePasswordScreen.CheckSuccess();
+
+    }
+
+    @Test(priority = 0)
+    public void ChangePassWord2() throws InterruptedException {
+//        WelcomPage welcomPage = new WelcomPage(driver);
+//        welcomPage.LogInAccount("dinhnd96@gmail.com", "Dinh12345");
+        HomePageVconomics homePageVconomics = new HomePageVconomics(driver);
+        homePageVconomics.ClickProfile();
+        Thread.sleep(5000);
+        ProfileScreen profileScreen = new ProfileScreen(driver);
+        profileScreen.ScrollIntoVersion();
+        profileScreen.ClickChangePassword();
+        ChangePasswordScreen changePasswordScreen = new ChangePasswordScreen(driver);
+        changePasswordScreen.changePassword("Dinh12345","Dinh1234");
+        changePasswordScreen.CheckSuccess();
+
     }
 
 //    @Test(priority = 1)

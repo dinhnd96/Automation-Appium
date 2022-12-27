@@ -36,6 +36,8 @@ public class GodSendSceen extends AndroidActions {
     @FindBy(xpath = "//android.widget.TextView[@text='Rule']")
     private WebElement ruleBtn;
 
+    @FindBy(xpath = "//android.view.ViewGroup[@bounds='[48,138][108,186]']")
+    private WebElement backBtn;
 
     public void ChooseNumber (){
         randomBtn.click();
@@ -45,9 +47,11 @@ public class GodSendSceen extends AndroidActions {
 
     public void ClickResult(){
         resultBtn.click();
+        backBtn.click();
     }
     public void ClickWonToday(){
         wonTodayBtn.click();
+        backBtn.click();
     }
 
     public void ClickRule(){

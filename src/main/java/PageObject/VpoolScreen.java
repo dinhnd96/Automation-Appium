@@ -38,14 +38,24 @@ public class VpoolScreen extends AndroidActions {
     @FindBy(xpath = "//android.view.ViewGroup[@bounds='[135,314][405,362]']")
     private WebElement flexibleBtnSaving;
 
-    @FindBy(xpath = "//android.view.ViewGroup[@bounds='[679,314][941,362]']")
-    private WebElement flexibleLockedBtnSaving;
+    @FindBy(xpath = "//android.view.ViewGroup[@bounds='[679,314][941,365]']")
+    private WebElement lockedBtnSavingBtn;
 
     @FindBy(xpath = "//android.view.ViewGroup[@bounds='[821,528][1034,618]']")
     private WebElement depositBtnSaving;
 
+    //Locked Saving Screen
+    @FindBy(xpath = "//android.view.ViewGroup[@bounds='[446,528][797,618]']")
+    private WebElement durationBtn;
 
-    // Saving Subscipstion
+    @FindBy(xpath = "//android.view.ViewGroup[@bounds='[58,1986][1022,2120]']")
+    private WebElement durationAcceptBtn;
+
+    @FindBy(xpath = "//android.view.ViewGroup[@bounds='[821,528][1034,618]']")
+    private WebElement lockedDepositBtn;
+
+
+    // Saving flexible Subscipstion
     @FindBy(xpath = "//android.view.ViewGroup[@bounds='[1021,614][1051,629]']")
     private WebElement walletTypeDropdown;
 
@@ -63,6 +73,25 @@ public class VpoolScreen extends AndroidActions {
 
     @FindBy(xpath = "//android.widget.TextView[@text='Confirm']")
     private WebElement confirmBtn;
+
+    // Saving Locked Subscipstion
+    @FindBy(xpath = "//android.view.ViewGroup[@bounds='[0,700][1080,834]']")
+    private WebElement lockedWalletTypeDropdown;
+
+    @FindBy(xpath = "//android.widget.CheckedTextView[@text='Spot wallet (Vesting)']")
+    private WebElement lockedSpotWalletOptions;
+
+    @FindBy(xpath = "//android.widget.CheckedTextView[@text='Blockchain wallet']")
+    private WebElement lockedBlockchainWalletOptions;
+
+    @FindBy(xpath = "//android.widget.EditText[@text='Enter amount']")
+    private WebElement lockedEnterMicsField;
+
+    @FindBy(xpath = "//android.view.ViewGroup[@bounds='[80,1589][110,1634]']")
+    private WebElement lockedCheckBoxElement;
+
+    @FindBy(xpath = "//android.widget.TextView[@text='Confirm']")
+    private WebElement lockedConfirmBtn;
 
 
     public void ClickBackBtnSaving() {
@@ -93,6 +122,22 @@ public class VpoolScreen extends AndroidActions {
         enterMicsField.sendKeys(String.valueOf(ammout));
         checkBoxElement.click();
         confirmBtn.click();
+        Thread.sleep(5000);
+    }
+
+    public void SavingLocked(String ammout) throws InterruptedException {
+        ClickSaving();
+        lockedBtnSavingBtn.click();
+        durationBtn.click();
+        durationAcceptBtn.click();
+        lockedDepositBtn.click();
+        lockedWalletTypeDropdown.click();
+        lockedSpotWalletOptions.click();
+        lockedEnterMicsField.sendKeys(String.valueOf(ammout));
+        lockedCheckBoxElement.click();
+        Thread.sleep(2000);
+        lockedCheckBoxElement.click();
+        lockedConfirmBtn.click();
         Thread.sleep(5000);
     }
 

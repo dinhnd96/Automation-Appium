@@ -9,19 +9,21 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import java.util.HashMap;
+
 public class TestLogin extends BaseTest {
 
-    @BeforeMethod
-    public void BeforeMethod() {
-        Activity activity = new Activity("com.vconomics", "com.vconomics.MainActivity");
-        driver.startActivity(activity);
-    }
+//    @BeforeMethod
+//    public void BeforeMethod() {
+//        Activity activity = new Activity("com.vconomics", "com.vconomics.MainActivity");
+//        driver.startActivity(activity);
+//    }
 
     @Test(priority = 0, groups = "Smoke")
     public void Login() throws InterruptedException {
 
         WelcomPage welcomPage = new WelcomPage(driver);
-        welcomPage.LogInAccount("nguyenduydinh96@yahoo.com", "Dinh1234");
+        welcomPage.LogInAccount("dinhnd96@gmail.com", "Dinh1234");
         Thread.sleep(5000);
         Assert.assertTrue(true);
     }

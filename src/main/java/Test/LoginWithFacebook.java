@@ -14,11 +14,11 @@ import org.testng.annotations.Test;
 import java.util.Set;
 
 public class LoginWithFacebook extends BaseTest {
-//    @BeforeMethod
-//    public void BeforeMethod(){
-//        Activity activity = new Activity("com.vconomics","com.vconomics.MainActivity");
-//        driver.startActivity(activity);
-//    }
+    @BeforeMethod
+    public void BeforeMethod(){
+        Activity activity = new Activity("com.vconomics","com.vconomics.MainActivity");
+        driver.startActivity(activity);
+    }
 
     @Test(priority = 1)
     public void LoginSusscessWithFacebook() throws InterruptedException {
